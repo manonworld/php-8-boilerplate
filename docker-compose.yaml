@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  php:
+    tty: true
+    container_name: php
+    build:
+      context: ./
+      dockerfile: ./.docker/Dockerfile
+    ports:
+      - "8000:8000"
+      - "9000:9000"
+      - "8888:8888"
+      - "443:443"
