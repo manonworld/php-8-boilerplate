@@ -3,6 +3,8 @@ services:
   php:
     tty: true
     container_name: php
+    volumes:
+      - ./app /var/www/html
     build:
       context: ./
       dockerfile: ./.docker/Dockerfile

@@ -5,9 +5,28 @@
 
 install:
 	@clear;
+	@echo "";
 	@docker-compose up -d --build;
 	@clear;
 	@echo "Infrastrucutre Successfully Installed";
+	@echo "";
+
+appinstall:
+	@clear;
+	@echo "";
+	@docker exec -it php composer install;
+	@clear;
+	@echo "";
+	@echo "Application Installed Successfully";
+	@echo "";
+
+appuninstall:
+	@clear;
+	@echo "";
+	@docker exec -it php rm -R vendor;
+	@clear;
+	@echo "";
+	@echo "Application Uninstalled Successfully";
 	@echo "";
 
 clean:
