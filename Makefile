@@ -6,6 +6,7 @@
 install:
 	@clear;
 	@echo "";
+	@docker-compose down --remove-orphans;
 	@docker-compose up -d --build;
 	@clear;
 	@echo "Infrastrucutre Successfully Installed";
