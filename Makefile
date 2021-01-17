@@ -30,6 +30,35 @@ appuninstall:
 	@echo "Application Uninstalled Successfully";
 	@echo "";
 
+
+start:
+	@clear;
+	@echo "";
+	@docker exec -it php symfony server:start -d;
+	@clear;
+	@echo "";
+	@echo "";
+	@echo "Application Started Successfully.";
+	@echo "";
+	@echo "Make sure you edit /etc/hosts file and add 127.0.0.1		manon.wip";
+	@echo "";
+	@echo "Point your browser to https://manon.wip:8000";
+	@echo "";
+	@echo "It should give you 404. Your application is now ready for the first route. :)";
+	@echo "";
+	@echo "";
+
+stop:
+	@clear;
+	@echo "";
+	@docker exec -it php symfony server:stop;
+	@clear;
+	@echo "";
+	@echo "";
+	@echo "Application Stopped Successfully.";
+	@echo "";
+	@echo "";
+
 clean:
 	@clear;
 	@echo "";
