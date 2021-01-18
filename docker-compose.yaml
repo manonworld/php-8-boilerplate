@@ -1,5 +1,6 @@
 version: '3.3'
 services:
+
   php:
     tty: true
     container_name: php
@@ -12,4 +13,15 @@ services:
       - "8000:8000"
       - "9000:9000"
       - "8888:8888"
+      - "7080:7080"
+
+  mercure:
+    tty: true
+    container_name: mercure
+    build:
+      context: ./
+      dockerfile: ./.docker/Mercure/Dockerfile
+    ports:
       - "443:443"
+      - "80:80"
+    env_file: ./.docker/Mercure/.env

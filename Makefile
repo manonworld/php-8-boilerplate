@@ -44,8 +44,6 @@ start:
 	@echo "";
 	@echo "Point your browser to https://manon.wip:8000";
 	@echo "";
-	@echo "It should give you 404. Your application is now ready for the first route. :)";
-	@echo "";
 	@echo "";
 
 stop:
@@ -64,6 +62,9 @@ clean:
 	@echo "";
 	@docker-compose down --remove-orphans;
 	@clear;
+	@docker system prune --all -f -a;
+	@clear;
+	@echo "";
 	@echo "Infrastrucutre Successfully Cleaned";
 	@echo "";
 
