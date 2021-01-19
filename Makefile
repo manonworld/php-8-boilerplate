@@ -62,8 +62,6 @@ clean:
 	@echo "";
 	@docker-compose down --remove-orphans;
 	@clear;
-	@docker system prune --all -f -a;
-	@clear;
 	@echo "";
 	@echo "Infrastrucutre Successfully Cleaned";
 	@echo "";
