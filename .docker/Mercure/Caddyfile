@@ -1,0 +1,12 @@
+localhost
+
+route {
+    mercure {
+        # Publisher JWT key
+        publisher_jwt !ChangeMe!
+        # Subscriber JWT key
+        subscriber_jwt !ChangeMe!
+    }
+
+    respond "OK" 200
+}
